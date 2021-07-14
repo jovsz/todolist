@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs'); //instalamos bcrytpjs e importamos
 'use strict';
 const {
   Model
@@ -46,5 +47,16 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Users',
     tableName: 'users',
   });
+  //encriptar la contraseña del usuario
+  Users.beforeCreate(async(user)=>{
+    try{
+      let hash = await bcrypt.hash(user.password, 8); //generamos el has
+      user.password = hash; //asignamos el hash a la contraseña que se genero en la base de datos
+      return user.password; //finalizamos
+    }catch(error){
+      throw new Error('Nose pudo encriptar la contraseña');
+    }
+  });
+
   return Users;
 };

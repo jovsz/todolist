@@ -13,20 +13,21 @@ module.exports = {
         allowNull: false,
       },
       description: {
-        type:Sequelize.TEXT
+        type: Sequelize.TEXT,
+        allowNull: false,
       },
       due_date: {
         type: Sequelize.DATE
       },
       user_id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         references: {
           model: 'users',
           key: 'id'
         }
       },
       category_id: {
-        type:Sequelize.INTEGER,
+        type: Sequelize.INTEGER,
         references: {
           model: 'categories',
           key: 'id'

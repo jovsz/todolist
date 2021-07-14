@@ -1,10 +1,15 @@
 module.exports ={
   development: {
     username: "postgres",
-    password: "Admin123",
+    password: "admin",
     database: "todolist",
     host: "127.0.0.1",
-    dialect: "postgres"
+    dialect: "postgres",
+    define: {
+      createdAt: 'created_at', //avisamos como se llamara ese campo ahora
+      updatedAt: 'updated_at' //
+    }
+
   },
   test: {
     username: "root",

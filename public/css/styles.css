@@ -1,0 +1,101 @@
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+.titulo{
+    color: rgb(34, 34, 177);
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.bg-register{
+    background: url('../assets/images/bg-paper.jpg');
+    height: 100vh;
+    padding: 20px 0px;
+}
+
+.bg-register h2{
+    margin-bottom: 20px;
+}
+
+.reg-form-area{
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #8a8484;
+}
+
+footer{
+    padding: 20px 0px;
+    background-color: #222;
+    color: #FFF;
+}
+
+.signin{
+    flex-basis: 100%;
+    justify-content: flex-end;
+    column-gap: 4%;
+}
+
+.main-container{
+    background-color: #edf0f7;
+    width: 100%;
+    max-width: 100%;
+}
+
+.d-title{
+    background-color: #FFF;
+    border-radius: 6px;
+    padding: 13px 25px;
+    margin-bottom: 20px;
+}
+
+.d-title h2{
+    margin-bottom: 0px;
+}
+
+.new-register{
+    background-color: #FFF;
+    border-radius: 6px;
+    padding: 13px 25px;
+}
+
+.table-container{
+    background-color: #FFF;
+    padding: 20px;
+}
+
+.custom-gbtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+ }

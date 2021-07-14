@@ -1,13 +1,33 @@
 <%- include('../template/head') -%>
-<form action="/registro" method="post">
-    <label for="firstname">Nombre</label>
-    <input type="text" id='firstname' name="firstname">
-    <label for="lastname">Apellido</label>
-    <input type="text" id='lastname' name="lastname">
-    <label for="email">Email</label>
-    <input type="email" id='email' name='email'>
-    <label for="password">Contraseña</label>
-    <input type="password" id='password' name='password'>
-    <button type="submit">Enviar</button>
-</form>
+<%- include('../template/nav') -%>
+<div class="bg-register">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Registro de usuarios</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6 reg-form-area">
+                <form action="/registro" method="POST">
+                    <div class="mb-3">
+                        <label for="firstname">Nombre</label>
+                        <input id="firstname" class="form-control" type="text"  name="firstname" required >
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastname">Apellido</label>
+                        <input class="form-control" type="text" id="lastname" name="lastname" required >
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" name="email" id="email" required  >
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Contraseña</label>
+                        <input class="form-control" type="password"  id="password" name="password" required >
+                    </div>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <%- include('../template/footer') -%>
