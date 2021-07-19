@@ -73,7 +73,7 @@ app.post("/registro", async (request, response, next) => {
 app.get('/categorias', (request,response,next) =>{
     //let username = `${request.user.firstname} ${request.user.lastname}`
     if(request.isAuthenticated()){
-        return response.render('pages/categories', {title: 'Categorias', username: ''})
+        return response.render('pages/categories', {title: 'Categorias', username: 'usuario'})
     }
     return response.redirect('/login');
 });
